@@ -24,13 +24,11 @@ text.classList.toggle('change');
 });
 
 const userList = document.querySelectorAll(".name-list li");
-const listInput = document.querySelector(".list-input");
-const addListBtn = document.querySelector(".addListBtn");
 
-addListBtn.addEventListener("click", function (){
+for (user of userList) {
+user.addEventListener("click", function(){
+this.style.color = 'gold';
 
-const newLi = document.createElement("LI");
-const liContent = document.createTextNode(listInput.value);
-newLi.appendChild(liContent);
-userList.appendChild(newLi);
 });
+
+}
